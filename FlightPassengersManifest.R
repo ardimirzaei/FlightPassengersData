@@ -30,8 +30,12 @@ FlightPassengersDataFrame<-function(Passengers=100,RandomSeed=NA, plot_Results=T
 	# https://www.disabled-world.com/calculators-charts/height-weight-teens.php
 	# Sourced from there
 
-	Male_Ht_Wt<-read.csv("male_htwt.csv") # Children Average Weights and Heights (in KG and cm) for males
-	Female_Ht_Wt<-read.csv("female_htwt.csv") # Ditto for females
+	# Uncomment if you have local files
+	# Male_Ht_Wt<-read.csv("male_htwt.csv") # Children Average Weights and Heights (in KG and cm) for males
+	# Female_Ht_Wt<-read.csv("female_htwt.csv") # Ditto for females
+
+	Male_Ht_Wt<-read.csv("https://raw.githubusercontent.com/ardimirzaei/FlightPassengersData/master/male_htwt.csv") # Children Average Weights and Heights (in KG and cm) for males
+	Female_Ht_Wt<-read.csv("https://raw.githubusercontent.com/ardimirzaei/FlightPassengersData/master/female_htwt.csv") # Ditto for females
 
 	df_M<-merge(df[df$gender==0,], Male_Ht_Wt, by='Age', all.x=TRUE)
 	df_F<-merge(df[df$gender==1,], Female_Ht_Wt, by='Age', all.x=TRUE)

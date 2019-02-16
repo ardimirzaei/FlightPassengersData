@@ -7,7 +7,6 @@ Running the source file can be done as so:
 ``` R
 source('https://raw.githubusercontent.com/ardimirzaei/FlightPassengersData/master/FlightPassengersManifest.R')
 ```
-However, two csv files are required to be in your working directory. They are the female and male weights and charts. 
 
 ## Using the data set
 To create a simple database run as
