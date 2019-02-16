@@ -13,9 +13,20 @@ To create a simple database run as
 ```r
 df<-FlightPassengersData()
 ```
-To change how many you wish to load:
+To change how many passengers you may wish to load:
 ```r
 df<-FlightPassengersData(200)
 ```
 Note: the default is 100. 
 
+## Options
+
+The function fits the following options:
+``` r
+Passengers=100
+RandomSeed=NA
+plot_Results=TRUE
+```
+
+RandomSeed can be set as any number if you want to reproduce a particular data set.
+Plot_Results will always show, unless you wish to disable it from showing the results when you run the function. 
